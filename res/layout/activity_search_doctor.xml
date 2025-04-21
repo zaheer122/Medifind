@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightgrey"
+    tools:context=".SearchDoctorActivity"> <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+     </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <EditText
+            android:id="@+id/searchByNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Search by Name"
+            android:textColor="@color/black"
+            android:textColorHint="#777777"
+            android:inputType="textPersonName" />
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter By:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/specializationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColorHint="#777777"
+            android:textColor="@color/black"
+            android:hint="Specialization" />
+        <EditText
+            android:id="@+id/searchByLocationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColorHint="#777777"
+            android:hint="Search by Location"
+            android:textColor="@color/black"
+            android:inputType="textPostalAddress" />
+        <EditText
+            android:id="@+id/availabilityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColorHint="#777777"
+            android:textColor="@color/black"
+            android:hint="Availability (e.g., Mon-Fri 9-5)"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_doctor" />
+
+</LinearLayout>

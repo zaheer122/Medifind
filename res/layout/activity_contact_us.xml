@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ContactUsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="support@medifind.com"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:autoLink="email"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+123 456 7890"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:autoLink="phone"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Website:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="www.medifind.com"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="8dp"/>
+
+</LinearLayout>
